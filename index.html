@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Experiments</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" class="link-button" id="binary-search">Binary Search</a></li>
+            <li><a href="#" class="link-button" id="battleship">Battleship</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="view" id="binary-search" style="display: none;">
+            <h3>Binary Search</h3>
+            <p>
+                Using the <b>Binary Search technique</b>, guess the secret number:
+            </p>
+            <div id="range" class="range"></div>
+            <div class="pulse-text" style="text-align: center;">
+                <span id="play-again" style="visibility:hidden; text-align:center;">Press ENTER</span>
+            </div>
+            <div id="prompt" class="form">
+                Guess a number <input type="text" id="guess" autocomplete="off">
+            </div>
+            <div id="info" style="text-align: center;"></div>
+            <div id="hint" style="text-align: center;"></div>
+        </div>
+        <div class="view" id="battleship" style="display: block;">
+            <h3>Battleship</h3>
+            <div class="canvas-container">
+                <canvas id="gameboard" width="500" height="500" style="border:1px solid LightBlue"></canvas>
+            </div>
+        </div>
+    </div>    
+    <script type="text/javascript" src="binary-search.js"></script>
+    <script type="text/javascript" src="battleship.js"></script>
+    <script type="text/javascript" src="view-handler.js"></script>
+</body>
+</html>
