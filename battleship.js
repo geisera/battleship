@@ -23,6 +23,9 @@ function drawShip( x, y, color ){
     let cellY = y * cellSize;
     ctx.fillStyle = color;
     ctx.fillRect(cellX, cellY, cellSize, cellSize);
+    
+    ctx.rect(cellX, cellY, cellSize, cellSize);
+    ctx.stroke();
 }
 
 function generateBattleshipBoard(  ) {
@@ -81,12 +84,12 @@ for ( let x = 0; x < board.length; x++ ){
     for ( let y = 0; y < board.length; y++ ){
         if (board[x][y] !== 0){
             color = 'red';
-            if( board[x][y] == 'A'){color = 'SlateGrey';}
-            if( board[x][y] == 'B'){color = 'DarkGray';}
-            if( board[x][y] == 'C'){color = 'Gray';}
-            if( board[x][y] == 'S'){color = 'Silver';}
-            if( board[x][y] == 'D'){color = 'LightSteelBlue';}
-            drawShip( x, y, color );
+            if( board[x][y] == 'A'){color = 'SlateGrey'; length = 5;}
+            if( board[x][y] == 'B'){color = 'DarkGray'; length = 4;}
+            if( board[x][y] == 'C'){color = 'Gray'; length = 3;}
+            if( board[x][y] == 'S'){color = 'Silver'; length = 2;}
+            if( board[x][y] == 'D'){color = 'DimGray'; length = 2;}
+            drawShip( x, y, color, length );
         }
     }
 }
